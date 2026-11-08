@@ -1,5 +1,7 @@
 # Solura AI Bot (Telegram + Gemini)
 
+[![CI](https://github.com/marchikx/solura-ai-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/marchikx/solura-ai-bot/actions/workflows/ci.yml) ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
 Professional, production-ready Telegram assistant powered by Google Gemini with persistent chat history in SQLite.  
 Built as an AI-augmented backend project (Cursor + LLMs) and then refactored and hardened for portfolio use.
 
