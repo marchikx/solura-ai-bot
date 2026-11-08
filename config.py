@@ -35,7 +35,7 @@ class Settings:
         - GEMINI_API_KEY
 
         Optional:
-        - GEMINI_MODEL (default: models/gemini-1.5-flash-latest)
+        - GEMINI_MODEL (default: models/gemini-2.5-flash)
         - CHAT_DB_PATH (default: chat_history.db)
         - LOG_LEVEL (default: INFO)
         """
@@ -53,7 +53,7 @@ class Settings:
         return cls(
             telegram_token=required("TELEGRAM_TOKEN"),
             gemini_api_key=required("GEMINI_API_KEY"),
-            gemini_model=os.getenv("GEMINI_MODEL", "models/gemini-1.5-flash-latest"),
+            gemini_model=os.getenv("GEMINI_MODEL", "models/gemini-2.5-flash"),
             chat_db_path=os.getenv("CHAT_DB_PATH", "chat_history.db"),
             log_level=os.getenv("LOG_LEVEL", "INFO"),
         )

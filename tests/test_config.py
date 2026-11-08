@@ -19,6 +19,6 @@ def test_load_applies_defaults(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("GEMINI_API_KEY", "gemini-key")
     monkeypatch.delenv("GEMINI_MODEL", raising=False)
     settings = Settings.load()
-    assert settings.gemini_model == "models/gemini-1.5-flash-latest"
+    assert settings.gemini_model == "models/gemini-2.5-flash"
     assert settings.chat_db_path == "chat_history.db"
     assert settings.log_level == "INFO"

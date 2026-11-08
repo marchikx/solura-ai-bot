@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/marchikx/solura-ai-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/marchikx/solura-ai-bot/actions/workflows/ci.yml) ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Professional, production-ready Telegram assistant powered by Google Gemini with persistent chat history in SQLite.  
+Small, layered Telegram assistant powered by Google Gemini with persistent chat history in SQLite.  
 Built as an AI-augmented backend project (Cursor + LLMs) and then refactored and hardened for portfolio use.
 
 ## Demo
@@ -14,7 +14,7 @@ Built as an AI-augmented backend project (Cursor + LLMs) and then refactored and
 
 ## What It Does
 
-- 🔁 **Conversational Telegram bot** – friendly chat interface powered by Gemini (`gemini-1.5-flash` by default).
+- 🔁 **Conversational Telegram bot** – friendly chat interface powered by Gemini (`gemini-2.5-flash` by default, override with `GEMINI_MODEL`).
 - 🧠 **Long-term memory** – stores the full dialog in **SQLite** so the model can answer in context.
 - 🔐 **Environment-based config** – all secrets (Telegram token, Gemini API key) are taken from `.env`, never hard-coded.
 - 🧪 **API healthcheck tools** – simple scripts to verify Gemini connectivity and list available models.
@@ -86,7 +86,7 @@ Create a `.env` file in the project root based on `.env.example`:
 TELEGRAM_TOKEN=your_telegram_bot_token
 GEMINI_API_KEY=your_gemini_api_key
 
-GEMINI_MODEL=models/gemini-1.5-flash-latest
+GEMINI_MODEL=models/gemini-2.5-flash
 CHAT_DB_PATH=chat_history.db
 LOG_LEVEL=INFO
 ```
@@ -151,7 +151,7 @@ All configuration is centralized in `config.py` and loaded via the `Settings` da
 
 - `TELEGRAM_TOKEN` – Telegram bot token (BotFather).
 - `GEMINI_API_KEY` – Google Gemini API key.
-- `GEMINI_MODEL` – model name, e.g. `models/gemini-1.5-flash-latest`.
+- `GEMINI_MODEL` – model name, e.g. `models/gemini-2.5-flash`.
 - `CHAT_DB_PATH` – path to the SQLite database file (default: `chat_history.db`).
 - `LOG_LEVEL` – one of `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`.
 
